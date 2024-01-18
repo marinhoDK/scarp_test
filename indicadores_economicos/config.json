@@ -1,0 +1,81 @@
+{
+  "pages": [
+    {
+      "name": "PIB",
+      "url": "https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/CuentasNacionales/Indices/c124092023.htm",
+      "selector": {
+        "data_link": "a[href$='.xlsx']"
+      }
+    },
+    {
+      "name": "IVA",
+      "url": "https://www.sri.gob.ec/estadisticas-generales-de-recaudacion-sri",
+      "selector": {
+        "data_link": "a[href$='.xlsx']"
+      }
+    },
+    {
+      "name": "inflacion",
+      "url": "https://www.ecuadorencifras.gob.ec/indice-de-precios-al-consumidor/",
+      "selector": {
+        "data_link": "table tr:nth-child(2) td:first-child a[href$='.zip']"
+      }
+    },
+    {
+      "name": "empleo",
+      "url": "https://www.ecuadorencifras.gob.ec/estadisticas-laborales-enemdu/",
+      "selector": {
+        "data_link": "table tr:nth-child(2) td:first-child a[href$='.xlsx']"
+      }
+    },
+    {
+      "name": "riesgo-pais-latino-america",
+      "url": "https://www.invenomica.com.ar/riesgo-pais-embi-america-latina-serie-historica/",
+      "selector": {
+        "data_link": ".content-enlace-single a[href$='.xlsx']"
+      }
+    },
+    {
+      "name": "Otros indicadores contenidos en una sola pagina web",
+      "url": "https://contenido.bce.fin.ec/documentos/PublicacionesNotas/Catalogo/IEMensual/Indices/m2060102023.html",
+      "actions":[
+        {
+          "action_type": "click",
+          "selector": "text=/Balanza de Pagos Normalizada/",
+          "variable_name": "remesas_recibidas"
+        },
+        {
+          "action_type":"click",
+          "selector": "text=/Producci\u00F3n Nacional de Petr\u00F3leo Crudo y sus Derivados/",
+          "variable_name": "produccion_de_barriles"
+        },
+        {
+          "action_type":"click",
+          "selector": "text=/Precios Promedio del Crudo Ecuatoriano y del Mercado Internacional/",
+          "variable_name": "precio_del_petroleo_ecuatoriano"
+        },
+        {
+          "action_type":"click",
+          "selector": "xpath=//td[contains(@class, 'nivel3')]/a[text()='Balanza Comercial']",
+          "variable_name": "exportaciones_importaciones_balanza comercial"
+        },
+        {
+          "action_type":"click",
+          "selector": "text=/Exportaciones por Producto Principal/",
+          "variable_name": "exportaciones_no_petroleras_principales_productos"
+        },
+        {
+          "action_type":"click",
+          "selector": "text=/Reservas Internacionales/",
+          "variable_name": "reservas_internacionales_del_Ecuador"
+        },
+        {
+          "action_type":"click",
+          "selector": "text=/Panorama: Banco Central del Ecuador/",
+          "variable_name": "encaje_legal_sistema_bancos"
+        }
+      ]      
+    }
+
+  ]
+}
